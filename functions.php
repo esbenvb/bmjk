@@ -154,9 +154,8 @@ function generate_card_mail($card) {
 	$mail['html'] = julekort_mail_html($card);
  	$mail['from'] = $config['mail_sender_email'];
 	$mail['fromname'] = $config['mail_sender_name'];
-	$mail['extra']['files[mail.gif'] = '@mail.gif';
-	$mail['extra']['content[mail.gif]'] = md5('mail.gif');	
-
+	$mail['extra']['files[mail.gif]'] = '@mail.gif';
+	$mail['extra']['content[mail.gif]'] = md5('mail.gif');
 	return $mail;
 }
 

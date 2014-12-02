@@ -12,10 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$card = get_card($sha1);
 		$mail = generate_card_mail($card);
 		$status = send_mail($mail);
-		var_export($status);
 		if ($status === TRUE) {
 			// Set sent success message
-			print 'oK';
 		}
 		else {
 			// Set error message to $json_encode(status);
