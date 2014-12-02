@@ -1,7 +1,7 @@
 <?php
 setup();
 function create_form_validate($data) {
-	require "rfc822.php";
+	require "libraries/rfc822.php";
 	$errors = array();
 	if (empty($data['recipient_name'])) {
 		$errors['recipient_name'] = 'Du mangler at udfylde modtagerens navn.';
@@ -44,6 +44,7 @@ function currentvalue($key, $attribute = TRUE) {
 function setup() {
 	global $config, $db;
 	require 'settings.php';
+	require 'libraries/Template.class.php';
 	$db = new PDO('mysql:host=' . $config['db_host'] . ';dbname=' . $config['db_name'] . ';charset=utf8', $config['db_user'], $config['db_pass']);
 
 }
