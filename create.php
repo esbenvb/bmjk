@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		}
 		else {
 			// Set error message to $json_encode(status);
-			print json_encode(status);
+			print json_encode($status);
 		}
 		// Forward to card
 		header("Location: card.php?card_sha=$sha1");
