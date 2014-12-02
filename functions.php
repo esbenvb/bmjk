@@ -126,7 +126,8 @@ function send_mail($mail) {
 	// Tell curl not to return headers, but do return the response
 	curl_setopt($session, CURLOPT_HEADER, false);
 	// Tell PHP not to use SSLv3 (instead opting for TLS)
-	curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
+	//curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
+	curl_setopt($session, CURLOPT_SSLVERSION, 6);
 	curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
 
 	// obtain response
@@ -181,7 +182,7 @@ function julekort_mail_text($card) {
 	You have received a christmas card. It can be read at this URL:
 	$card_url
 END;
-	return $card_html;	
+	return $card_text;	
 }
 /*
 $card = get_card('60baa6ea1b54a39626a5837897347dcfc571d5b3');
