@@ -1,1 +1,20 @@
-settings.php.example
+<?php
+$config = array();
+
+# Database
+$config['db_host'] = 'somehost';
+$config['db_name'] = 'somedbname;
+$config['db_user'] = 'someuser';
+$config['db_pass'] = 'somepassword';
+
+# Sendgrid
+$config['sendgrid_user'] = 'someuser';
+$config['sendgrid_password'] = 'somepassword';
+
+#Mail options
+$config['mail_sender_name'] = 'Berlingske Julekort';
+$config['mail_sender_email'] = 'julekort@berlingskemedia.dk';
+$config['mail_subject'] = 'Julekort fra :sender_name';
+
+# General
+$config['base_url'] = 'http://julekort.berlingskemedia.dk';
