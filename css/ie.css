@@ -1,0 +1,19 @@
+.bem-logo {
+	background: url(/dist/images/logo-ie.png) 26px center no-repeat;	
+}
+
+
+body {
+	background: #c51b1b;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c51b1b', endColorstr='#f7a600',GradientType=0 ); /* IE6-8 */
+	overflow: auto;
+	min-height: 2000px;
+}
+
+.bem-logo:before {
+	display: none;
+}
+
+.container {
+	z-index: 999999;
+}
