@@ -117,7 +117,6 @@ function send_mail($mail) {
 	$params += $mail['extra'];
 
 	$request =  $url.'api/mail.send.json';
-var_dump($params);
 	// Generate curl request
 	$session = curl_init($request);
 	// Tell curl to use HTTP POST
