@@ -21,7 +21,7 @@
   </head>
 
 
-<body class="<?php print $body_classes; ?>">
+<body class="<?php if (isset($body_classes)) print $body_classes; ?>">
 <?php if (isset($top_menu)) print $top_menu; ?>
   
 <div class="gradient"></div>
