@@ -1,0 +1,10 @@
+<Files create.php>
+    Order deny,allow
+    Deny from all
+    # HCL TDC DK IP Pool 1:
+    Allow from 80.63.106.208/29
+    # HCL DC2 IP Pool
+    Allow from 217.111.209.192/27
+    # HCL DC1 IP Pool
+    Allow from 217.111.209.224/27
+</Files>
