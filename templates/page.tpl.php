@@ -21,8 +21,8 @@
   </head>
 
 
-<body class="card loading">
-
+<body class="<?php print $body_classes; ?>">
+<?php print $top_menu; ?>
   
 <div class="gradient"></div>
 <div class="star">
@@ -46,12 +46,14 @@
     <div class="row main">
         
         
-        
-   
+<div class="col-md-4 col-md-push-8 text-center tree">
+      <img src="images/tree.png" class="img-responsive">
+</div>
+<div class="col-md-8 col-md-pull-4 relative card-content">        
     	<?php print $content; ?>
     </div>
 
-    
+</div>    
 
     <div class="footer">
         <div class="container">
