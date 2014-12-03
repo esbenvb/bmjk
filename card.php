@@ -14,6 +14,7 @@ else {
 	foreach ($card as $key => $value) {
 		$card_view->{$key} = $value;
 	}
+	$card_view->message_filtered = message_filter($card_view->message);
 	$card_view->sender_email_link = maillink($card_view->sender_email);
 	$card_view->recipient_email_link = maillink($card_view->recipient_email);
 	$card_content = $card_view->render('templates/card.tpl.php');

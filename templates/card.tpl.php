@@ -3,4 +3,4 @@
 		<p><strong>Fra:</strong> <?php print $recipient_name; ?> (<?php print $recipient_email_link; ?>)</p>
 	</div>
 		<p><?php print $recipient_name; ?>,</p>
-		<?php print $message; ?>
+		<?php print $message_filtered; ?>
