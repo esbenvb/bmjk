@@ -1,1 +1,1 @@
-mail_text.html.php
+You have received a christmas card. It can be read at this URL: <?php print $card_url; ?>

@@ -19,6 +19,7 @@ else {
 	$card_content = $card_view->render('templates/card.tpl.php');
 	$page = new Template();
 	$page->content = $card_content;
+	$page->body_classes = 'card loading';
 	$page->title = strtr($config['page_title'], array(':sender_name' => $card['sender_name']));
 	print $page->render('templates/page.tpl.php');
 }

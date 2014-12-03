@@ -115,8 +115,6 @@ function send_mail($mail) {
 	    'from'      => $mail['from'],
 	    'fromname'  => $mail['fromname'],
 	  );
-	$params += $mail['extra'];
-
 	$request =  $url.'api/mail.send.json';
 	// Generate curl request
 	$session = curl_init($request);
@@ -137,7 +135,6 @@ function send_mail($mail) {
 
 	// print everything out
 	$response = json_decode($response_json);
-	//print_r($response);
 	if ($response->message == 'success') {
 		return TRUE;
 	}
@@ -156,35 +153,28 @@ function generate_card_mail($card) {
 	$mail['html'] = julekort_mail_html($card);
  	$mail['from'] = $config['mail_sender_email'];
 	$mail['fromname'] = $config['mail_sender_name'];
-	$mail['extra']['files[mail.gif]'] = '@mail.gif';
-	$mail['extra']['content[mail.gif]'] = md5('mail.gif');
 	return $mail;
 }
 
 function julekort_mail_html($card) {
 	global $config;
-	$card_url = $config['base_url'] . '/card.php?card_sha=' . $card['sha1'];
-	$image_url = 'cid:' . md5('mail.gif');
-	$card_html = <<<END
-	<html>
-	<body>
-		Click <a href="$card_url">here</a> to read the mail. <br />
-		<a href="$card_url"><img src="$image_url" /></a>
-	</body>
-	</html>
-
-END;
-	return $card_html;
+	$mail = new Template();
+	$mail->card_url = $config['base_url'] . '/card.php?card_sha=' . $card['sha1'];
+	$mail->image_url = $config['base_url'] . '/images/mail.jpg';
+	$mail->logo_url = $config['base_url'] . '/images/logo-mail.png';
+	foreach ($card as $key => $value) {
+			$mail->{$key} = $value;
+	}
+	return $mail->render('templates/mail_html.tpl.php');
 }
+
 function julekort_mail_text($card) {
 	global $config;
-	$card_url = $config['base_url'] . '/card.php?card_sha=' . $card['sha1'];
-	$card_text = <<<END
-	You have received a christmas card. It can be read at this URL:
-	$card_url
-END;
-	return $card_text;	
+	$mail = new Template();
+	$mail->card_url = $config['base_url'] . '/card.php?card_sha=' . $card['sha1'];
+	return $mail->render('templates/mail_text.tpl.php');
 }
+
 /*
 $card = get_card('60baa6ea1b54a39626a5837897347dcfc571d5b3');
 print julekort_mail_html($card);
