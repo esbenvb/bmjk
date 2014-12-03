@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="images/favicon.ico">
 
-    <title><?php print $title; ?> - Glædelig Jul / Merry Christmas - Berlingske Media</title>
+    <title><?php if (isset($title)) print $title . ' - '; ?>Glædelig Jul / Merry Christmas - Berlingske Media</title>
 
     
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 
 
 <body class="<?php print $body_classes; ?>">
-<?php print $top_menu; ?>
+<?php if (isset($top_menu)) print $top_menu; ?>
   
 <div class="gradient"></div>
 <div class="star">
