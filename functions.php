@@ -184,7 +184,7 @@ function set_session_status($message, $class) {
 }
 
 function show_session_status($view) {
-	if (isset($_SESSION['message'])) {
+	if (isset($_SESSION['status_message'])) {
 		$view->status = $_SESSION['status_message'];
 		$view->status_class = isset($_SESSION['status_message_class']) ? $_SESSION['status_message_class'] : '';
 		unset($_SESSION['status_message_class']);
