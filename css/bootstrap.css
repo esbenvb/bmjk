@@ -4148,7 +4148,7 @@ input.error {
   animation-fill-mode: forwards;
   @media (max-width: 991px) {
     height: 1em;
-    top: 1em;
+    top: 0em;
   }
 }
 .card-content {
