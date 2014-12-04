@@ -25,3 +25,9 @@ body {
 .tree {
 	background: url(/dist/images/tree-ie.png);
 }
+
+.greeting-container,
+.card-content,
+.tree {
+	opacity: 1;
+}
