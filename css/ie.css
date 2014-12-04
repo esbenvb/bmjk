@@ -26,6 +26,9 @@ body {
 	height: 200em;
 	background: url(../images/tree-ie.png) center top no-repeat;
 }
+@media (max-width: 991px) {
+	display: none;
+}
 
 .greeting-container,
 .card-content,

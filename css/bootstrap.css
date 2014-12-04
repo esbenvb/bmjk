@@ -4146,7 +4146,7 @@ input.error {
   -webkit-animation: blink-star 6s steps(15, start) infinite ;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  @media (max-width: @screen-sm-max) {
+  @media (max-width: 991px) {
     height: 1em;
     top: 1em;
   }
