@@ -23,7 +23,8 @@ body {
 }
 
 .tree {
-	background: url(/dist/images/tree-ie.png);
+	height: 200em;
+	background: url(../images/tree-ie.png);
 }
 
 .greeting-container,
