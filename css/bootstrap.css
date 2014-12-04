@@ -4099,15 +4099,15 @@ input.error {
 }
 .greeting-container {
   opacity: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
+  animation: fade-in .2s steps(15, start);
+  -webkit-animation: fade-in .2s steps(15, start);
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 .tree {
   opacity: 0;
-  animation: fade-in-transform 0.2s steps(10, start) 1s;
-  -webkit-animation: fade-in-transform 0.2s steps(10, start) 1s;
+  animation: fade-in-transform 0.2s steps(10, start) .4s;
+  -webkit-animation: fade-in-transform 0.2s steps(10, start) .4s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-out;
@@ -4115,8 +4115,8 @@ input.error {
 }
 .card-content {
   opacity: 0;
-  animation: fade-in-transform 0.2s steps(10, start) .5s;
-  -webkit-animation: fade-in-transform 0.2s steps(10, start) .5s;
+  animation: fade-in-transform 0.2s steps(10, start) .2s;
+  -webkit-animation: fade-in-transform 0.2s steps(10, start) .2s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-out;
