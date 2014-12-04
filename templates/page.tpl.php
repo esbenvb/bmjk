@@ -43,6 +43,17 @@
     			</div>
 	    </div>
     </div>
+
+
+<?php if(isset($status)): ?>
+  <div class="row status">
+    <div class="col-md-12 text-center status-content">
+      <div class="status-wrapper <?php if(isset($status_class)) print $status_class; ?>"><?php print $status; ?></div>  
+    </div>
+  </div>
+<?php endif; ?>
+
+
     <div class="row main">
         
         

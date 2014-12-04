@@ -24,7 +24,7 @@ function create_form_validate($data) {
 
 function errorclass($errors, $key) {
 	if (isset($errors[$key])) {
-		return 'class = "error"';
+		return 'error';
 	}
 	return '';
 }
@@ -46,7 +46,7 @@ function setup() {
 	require 'settings.php';
 	require 'libraries/Template.class.php';
 	$db = new PDO('mysql:host=' . $config['db_host'] . ';dbname=' . $config['db_name'] . ';charset=utf8', $config['db_user'], $config['db_pass']);
-
+	session_start();
 }
 
 function db() {
@@ -175,9 +175,16 @@ function julekort_mail_text($card) {
 	return $mail->render('templates/mail_text.tpl.php');
 }
 
-/*
-$card = get_card('60baa6ea1b54a39626a5837897347dcfc571d5b3');
-print julekort_mail_html($card);
-$mail = generate_card_mail($card);
-print_r($mail);
-send_mail($mail);*/
+function set_session_status($message, $class) {
+	$_SESSION['status_message'] = $message;
+	$_SESSION['status_message_class'] = $class;
+}
+
+function show_session_status($view) {
+	if (isset($_SESSION['message'])) {
+		$view->status = $_SESSION['status_message'];
+		$view->status_class = isset($_SESSION['status_message_class']) ? $_SESSION['status_message_class'] : '';
+		unset($_SESSION['status_message_class']);
+		unset($_SESSION['status_message']);
+	}
+}
