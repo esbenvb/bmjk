@@ -4111,8 +4111,8 @@ input.error {
 .tree {
     position: relative;
     opacity: 0;
-    animation: fade-in-transform .2s steps(10, start) 2.2s;
-    -webkit-animation: fade-in-transform .2s steps(10, start) 2.2s;
+    animation: fade-in-transform .2s steps(10, start) .4s;
+    -webkit-animation: fade-in-transform .2s steps(10, start) .4s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -webkit-animation-timing-function: ease-out; 
