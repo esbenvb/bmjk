@@ -24,6 +24,8 @@
 <body class="<?php if (isset($body_classes)) print $body_classes; ?>">
 <?php if (isset($top_menu)) print $top_menu; ?>
   
+
+
 <div class="gradient"></div>
 <div class="star">
     <div class="star-1"></div>

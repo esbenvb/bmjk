@@ -2,22 +2,24 @@
 setup();
 function create_form_validate($data) {
 	require "libraries/rfc822.php";
+	global $strings;
 	$errors = array();
 	if (empty($data['recipient_name'])) {
-		$errors['recipient_name'] = 'Du mangler at udfylde modtagerens navn.';
+		$errors['recipient_name'] = $strings['input_error_recipient_name'];
 	}
 	if (empty($data['sender_name'])) {
-		$errors['sender_name'] = 'Du mangler at udfylde afsenderens navn.';
+		$errors['sender_name'] = $strings['input_error_sender_name'];
 	}
-	
+
 	if (!is_valid_email_address($data['recipient_email'])) {
-		$errors['recipient_email'] = 'Indtast en gyldig modtager-mailadresse.';
+		$errors['recipient_email'] = $strings['input_error_recipient_email'];
 	}
 	if (!is_valid_email_address($data['sender_email'])) {
-		$errors['sender_email'] = 'Indtast en gyldig afsender-mailadresse.';
+		$errors['sender_email'] = $strings['input_error_sender_email'];
 	}
+
 	if (empty($data['message'])) {
-		$errors['message'] = 'Du mangler at udfylde beskeden.';
+		$errors['message'] = $strings['input_error_message'];
 	}
 	return $errors;
 }
@@ -32,18 +34,19 @@ function errorclass($errors, $key) {
 function currentvalue($key, $attribute = TRUE) {
 	if (!empty($_POST[$key])) {
 		if ($attribute) {
-			return 'value = "' . $_POST[$key] . '"';
+			return 'value = "' . htmlspecialchars($_POST[$key]) . '"';
 		}
 		else {
-			return $_POST[$key];
+			return htmlspecialchars($_POST[$key]);
 		}
 	}
 	return '';
 }
 
 function setup() {
-	global $config, $db;
+	global $config, $strings, $db;
 	require 'settings.php';
+	require 'strings.php';
 	require 'libraries/Template.class.php';
 	$db = new PDO('mysql:host=' . $config['db_host'] . ';dbname=' . $config['db_name'] . ';charset=utf8', $config['db_user'], $config['db_pass']);
 	session_start();
@@ -144,11 +147,11 @@ function send_mail($mail) {
 }
 
 function generate_card_mail($card) {
-	global $config;
+	global $config, $strings;
 	$mail = array();
 	$mail['to'] = $card['recipient_email'];
 	$mail['toname'] = $card['recipient_name'];
-	$mail['subject'] = strtr($config['mail_subject'], array(':sender_name' => $card['sender_name']));
+	$mail['subject'] = strtr($strings['mail_subject'], array(':sender_name' => $card['sender_name']));
 	$mail['text'] = julekort_mail_text($card);
 	$mail['html'] = julekort_mail_html($card);
  	$mail['from'] = $config['mail_sender_email'];
@@ -187,4 +190,16 @@ function show_session_status($view) {
 		unset($_SESSION['status_message_class']);
 		unset($_SESSION['status_message']);
 	}
+}
+
+function card_render($card) {
+	$card_view = new Template();
+	foreach ($card as $key => $value) {
+		$card_view->{$key} = $value;
+	}
+	$card_view->message_filtered = message_filter($card_view->message);
+	$card_view->sender_email_link = maillink($card_view->sender_email);
+	$card_view->recipient_email_link = maillink($card_view->recipient_email);
+	$card_content = $card_view->render('templates/card.tpl.php');
+	return $card_content;
 }

@@ -42,14 +42,9 @@
     </label>
   </div>
 
-  FIXME
-  <input type=submit>
-  FIXME
-
   <div class="form-group border-top">
-    
-    <a href="preview.php"  class="btn btn-default btn-xs">Preview kort </a>
-    <a href="confirmation.php" class="btn btn-success btn-xs pull-right">Send kort</a>      
+    <input type="submit" name="op" class="btn btn-default btn-xs" value="<?php print $preview_button; ?>" />
+    <input type="submit" name="op" class="btn btn-success btn-xs pull-right" value="<?php print $send_button; ?>" />
     
   </div>
 
