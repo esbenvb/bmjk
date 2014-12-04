@@ -4069,6 +4069,25 @@ body {
   -webkit-animation-delay: 1.8s;
   animation-delay: 1.8s;
 }
+.main {
+  padding-bottom:100px: 
+}
+textarea.error,
+input.error {
+  background: #ffb3b3;
+  border: 2px solid red;
+}
+
+.status-content {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #faebcc;
+  border-radius: 4px;
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  font-size: 15px;
+}
+
 @media (max-width: 991px) {
   .star-1,
   .star-2,
@@ -4087,8 +4106,8 @@ body {
 }
 .tree {
   opacity: 0;
-  animation: fade-in-transform 0.2s steps(10, start) 2.2s;
-  -webkit-animation: fade-in-transform 0.2s steps(10, start) 2.2s;
+  animation: fade-in-transform 0.2s steps(10, start) 1s;
+  -webkit-animation: fade-in-transform 0.2s steps(10, start) 1s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-out;
@@ -4096,8 +4115,8 @@ body {
 }
 .card-content {
   opacity: 0;
-  animation: fade-in-transform 0.4s steps(10, start) 2.4s;
-  -webkit-animation: fade-in-transform 0.4s steps(10, start) 2.4s;
+  animation: fade-in-transform 0.2s steps(10, start) .5s;
+  -webkit-animation: fade-in-transform 0.2s steps(10, start) .5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-out;
