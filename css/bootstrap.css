@@ -3966,10 +3966,14 @@ body {
   padding-bottom: 200px;
 }
 .gradient {
+  background: #c51b1b; 
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjYzUxYjFiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTklIiBzdG9wLWNvbG9yPSIjZjdhNjAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(-30deg, #f7a600, #c51b1b);
   background-image: -o-linear-gradient(-30deg, #f7a600, #c51b1b);
+  background: -ms-linear-gradient(-30deg,  #c51b1b 0%,#f7a600 100%); /* IE10+ */
   background-image: linear-gradient(-30deg, #f7a600, #c51b1b);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c51b1b', endColorstr='#f7a600',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
   position: fixed;
   top: 0;
   left: 0;
@@ -4070,7 +4074,7 @@ body {
   animation-delay: 1.8s;
 }
 .main {
-  padding-bottom:100px: 
+  padding-bottom:200px;
 }
 textarea.error,
 input.error {
@@ -4105,13 +4109,47 @@ input.error {
   animation-fill-mode: forwards;
 }
 .tree {
+    position: relative;
+    opacity: 0;
+    animation: fade-in-transform .2s steps(10, start) 2.2s;
+    -webkit-animation: fade-in-transform .2s steps(10, start) 2.2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out; 
+    animation-timing-function: ease-out;
+}  
+
+@keyframes blink-star {
+  0% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-webkit-keyframes blink-star {
+  0% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.tree:before {
+  content: '';
+  background: url(/dist/images/tree-star.png) center center no-repeat;  
+  background-size: contain;
+  display: inline-block;
+  width: 100%;
+  height: 3em;
+  position: absolute;
+  top: 3em;
+  left: 0;
+  right: 0;
   opacity: 0;
-  animation: fade-in-transform 0.2s steps(10, start) .4s;
-  -webkit-animation: fade-in-transform 0.2s steps(10, start) .4s;
+  animation: blink-star 6s steps(15, start) infinite ;
+  -webkit-animation: blink-star 6s steps(15, start) infinite ;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
+  @media (max-width: @screen-sm-max) {
+    height: 1em;
+    top: 1em;
+  }
 }
 .card-content {
   opacity: 0;

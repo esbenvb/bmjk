@@ -17,3 +17,11 @@ body {
 .container {
 	z-index: 999999;
 }
+
+.tree img {
+	display: none;
+}
+
+.tree {
+	background: url(/dist/images/tree-ie.png);
+}
