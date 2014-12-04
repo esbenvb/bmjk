@@ -4132,7 +4132,7 @@ input.error {
 
 .tree:before {
   content: '';
-  background: url(/dist/images/tree-star.png) center center no-repeat;  
+  background: url(../images/tree-star.png) center center no-repeat;  
   background-size: contain;
   display: inline-block;
   width: 100%;
