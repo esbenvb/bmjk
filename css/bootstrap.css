@@ -4146,11 +4146,14 @@ input.error {
   -webkit-animation: blink-star 6s steps(15, start) infinite ;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  @media (max-width: 991px) {
-    height: 1em;
+}
+@media screen and (max-width: 767px) {
+  .tree:before {
+    height: 2em;
     top: 0em;
   }
 }
+
 .card-content {
   opacity: 0;
   animation: fade-in-transform 0.2s steps(10, start) .2s;
