@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['op'] != $strings['edit_butto
 			$status = send_mail($mail);
 			if ($status === TRUE) {
 				// Set success message
+				card_register_ok($card['sha1'], 'mail_sent');
 				set_session_status($strings['send_card_confirm_message'], 'success');
 			}
 			else {

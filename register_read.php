@@ -11,8 +11,13 @@ else {
 		// Reload card to get opened timestamp.
 		$card = get_card($card['sha1']);
 		$mail = generate_notification_mail($card);
-		send_mail($mail);
-		print 1;
+		if (send_mail($mail)) {
+			card_register_ok($card['sha1'], 'notification_sent');
+			print 1;
+		}
+		else {
+			print -2;
+		}
 	}
 	else {
 		print 0;

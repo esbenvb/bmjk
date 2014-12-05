@@ -241,3 +241,12 @@ function generate_notification_mail($card) {
 	$mail['fromname'] = $config['mail_sender_name'];
 	return $mail;
 }
+
+function card_register_ok($sha1, $flag) {
+	$stmt = db()->prepare('UPDATE card SET ' . $flag . ' = 1 WHERE sha1 = :sha1');
+	$stmt->execute(array(
+		':sha1' => $sha1,
+	));
+	$stmt->debugDumpParams();
+	return $stmt->rowCount();
+}
