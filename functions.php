@@ -247,6 +247,5 @@ function card_register_ok($sha1, $flag) {
 	$stmt->execute(array(
 		':sha1' => $sha1,
 	));
-	$stmt->debugDumpParams();
 	return $stmt->rowCount();
 }
