@@ -65,7 +65,7 @@ function create_card($data) {
 		':recipient_name' => $data['recipient_name'],
 		':sender_email' => $data['sender_email'],
 		':sender_name' => $data['sender_name'],
-		':sender_ip' => isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? : $_SERVER['REMOTE_ADDR'],
+		':sender_ip' => isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'],
 	);
 	$stmt = db()->prepare('INSERT INTO card (sha1, message, recipient_email, recipient_name, sender_email, sender_name, sender_ip, created) VALUES (:sha1, :message, :recipient_email, :recipient_name, :sender_email, :sender_name, :sender_ip, unix_timestamp())');
 	$stmt->execute($values);
@@ -113,7 +113,7 @@ function send_mail($mail) {
 	    'api_key'   => $pass,
 	    'to'        => $mail['to'],
 	    'subject'   => $mail['subject'],
-	    'html'      => $mail['html'],
+	    'html'      => isset($mail['html']) ? $mail['html'] : NULL,
 	    'text'      => $mail['text'],
 	    'from'      => $mail['from'],
 	    'fromname'  => $mail['fromname'],
@@ -202,4 +202,42 @@ function card_render($card) {
 	$card_view->recipient_email_link = maillink($card_view->recipient_email);
 	$card_content = $card_view->render('templates/card.tpl.php');
 	return $card_content;
+}
+
+function register_read($card) {
+	if ((isset($_GET['register']) && $_GET['register'] == 'no') || isset($card['opened'])) {
+		return FALSE;
+	}
+	$stmt = db()->prepare('UPDATE card SET opened=unix_timestamp(), opened_ip=:opened_ip WHERE sha1 = :sha1');
+	$stmt->execute(array(
+		':opened_ip' => isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'],
+		':sha1' => $card['sha1'],
+	));
+	if ($stmt->rowCount() == 1) {
+		return TRUE;
+	}
+}
+
+function notification_mail($card) {
+	global $config, $strings;
+	$mail = new Template();
+	$mail->card_url = $config['base_url'] . '/card.php?card_sha=' . $card['sha1'];
+	$mail->read_time = $read_time;
+	foreach ($card as $key => $value) {
+		$mail->{$key} = $value;
+	}
+	$mail->opened_formatted = date($strings['card_read_notification_time_format'], $mail->opened);
+	return $mail->render('templates/card_read_notification_mail.tpl.php');
+}
+
+function generate_notification_mail($card) {
+	global $config, $strings;
+	$mail = array();
+	$mail['to'] = $card['sender_email'];
+	$mail['toname'] = $card['sender_name'];
+	$mail['subject'] = strtr($strings['card_read_notification_subject'], array(':recipient_name' => $card['recipient_name']));
+	$mail['text'] = notification_mail($card);
+	$mail['from'] = $config['mail_sender_email'];
+	$mail['fromname'] = $config['mail_sender_name'];
+	return $mail;
 }

@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['op'] != $strings['edit_butto
 				set_session_status(json_encode($status), 'error');
 			}
 			// Forward to card
-			header("Location: card.php?card_sha=$sha1");
+			header("Location: card.php?card_sha=$sha1&register=no");
 		}
 		elseif ($_POST['op'] == $strings['preview_button']) {
 			$card = $_POST;

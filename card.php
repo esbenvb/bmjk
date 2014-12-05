@@ -15,6 +15,11 @@ else {
 	$page = new Template();
 	show_session_status($page);
 	$page->content = $card_content;
+	if (!(isset($_GET['register']) && $_GET['register'] == 'no') && !isset($card['opened'])) {
+		$register_code = new Template();
+		$register_code->sha1 = $card['sha1'];
+		$page->footer = $register_code->render('templates/register_read.tpl.php');
+	}
 	$page->body_classes = 'card loading';
 	$page->title = strtr($strings['page_title'], array(':sender_name' => $card['sender_name']));
 	print $page->render('templates/page.tpl.php');

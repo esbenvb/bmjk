@@ -91,6 +91,7 @@
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
 <script>window.jQuery || document.write('<script src="/dist/js/jquery-1.11.0.min.js"><\/script>')</script> 
 
+<?php if(isset($footer)) print $footer; ?>
     
   </body>
 </html>

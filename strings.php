@@ -16,3 +16,19 @@ $strings['input_error_sender_name'] = 'Du mangler at udfylde afsenderens navn.';
 $strings['input_error_recipient_email'] = 'Indtast en gyldig modtager-mailadresse.';
 $strings['input_error_sender_email'] = 'Indtast en gyldig afsender-mailadresse.';
 $strings['input_error_message'] = 'Du mangler at udfylde beskeden.';
+$strings['card_read_notification_subject'] = 'Din julehilsen til :recipient_name er blevet læst';
+$strings['card_read_notification_time_format'] = '\d. j/n Y \k\l H:i';
+$strings['months'] = array(
+	'januar',
+	'februar',
+	'marts',
+	'april',
+	'maj',
+	'juni',
+	'juli',
+	'august',
+	'september',
+	'oktober',
+	'november',
+	'december',
+);

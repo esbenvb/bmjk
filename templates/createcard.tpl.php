@@ -35,13 +35,13 @@
     <textarea class="form-control <?php print errorclass($errors, 'message')?>" rows="10" name="message" placeholder="Indtast din julehilsen" ><?php print currentvalue('message', FALSE)?></textarea>
   </div>
 
-
+<!--
   <div class="checkbox">
     <label>
       <input type="checkbox">TODO: Send mig en mail når kortet er blevet læst
     </label>
   </div>
-
+-->
   <div class="form-group border-top">
     <input type="submit" name="op" class="btn btn-default btn-xs" value="<?php print $preview_button; ?>" />
     <input type="submit" name="op" class="btn btn-success btn-xs pull-right" value="<?php print $send_button; ?>" />
