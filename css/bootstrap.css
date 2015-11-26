@@ -3885,6 +3885,10 @@ html,
 body {
   height: 100%;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 .preloader {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(-30deg, #f7a600, #c51b1b);
@@ -3966,14 +3970,11 @@ body {
   padding-bottom: 200px;
 }
 .gradient {
-  background: #c51b1b; 
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjYzUxYjFiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTklIiBzdG9wLWNvbG9yPSIjZjdhNjAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+  /*#gradient.directional(#f7a600,#c51b1b, -30deg);*/
   background-repeat: repeat-x;
-  background-image: -webkit-linear-gradient(-30deg, #f7a600, #c51b1b);
-  background-image: -o-linear-gradient(-30deg, #f7a600, #c51b1b);
-  background: -ms-linear-gradient(-30deg,  #c51b1b 0%,#f7a600 100%); /* IE10+ */
-  background-image: linear-gradient(-30deg, #f7a600, #c51b1b);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c51b1b', endColorstr='#f7a600',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+  background-image: -webkit-linear-gradient(-30deg, #c6cc00, #00843d);
+  background-image: -o-linear-gradient(-30deg, #c6cc00, #00843d);
+  background-image: linear-gradient(-30deg, #c6cc00, #00843d);
   position: fixed;
   top: 0;
   left: 0;
@@ -3989,8 +3990,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
+  /*animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);*/
 }
 .star-1 {
   position: absolute;
@@ -3998,11 +3999,11 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
-  animation: fade-in-half 2s steps(15, start);
-  -webkit-animation: fade-in-half 2s steps(15, start);
-  opacity: .4;
+  /*animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);*/
+  /*animation: fade-in-half 2s steps(15, start);
+    -webkit-animation: fade-in-half 2s steps(15, start);
+    opacity: .4;*/
   background: url(../images/star-main.png) center top no-repeat;
 }
 .blink {
@@ -4015,8 +4016,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
+  /*animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);*/
   animation: blink 6s steps(15, start) infinite;
   -webkit-animation: blink 6s steps(15, start) infinite;
   opacity: 0;
@@ -4030,8 +4031,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
+  /*animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);*/
   animation: blink 6s steps(15, start) infinite;
   -webkit-animation: blink 6s steps(15, start) infinite;
   opacity: 0;
@@ -4047,8 +4048,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
+  /*animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);*/
   animation: blink 6s steps(15, start) infinite;
   -webkit-animation: blink 6s steps(15, start) infinite;
   opacity: 0;
@@ -4064,8 +4065,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
+  /*animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);*/
   animation: blink 6s steps(15, start) infinite;
   -webkit-animation: blink 6s steps(15, start) infinite;
   opacity: 0;
@@ -4073,25 +4074,6 @@ body {
   -webkit-animation-delay: 1.8s;
   animation-delay: 1.8s;
 }
-.main {
-  padding-bottom:200px;
-}
-textarea.error,
-input.error {
-  background: #ffb3b3;
-  border: 2px solid red;
-}
-
-.status-content {
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid #faebcc;
-  border-radius: 4px;
-  color: #8a6d3b;
-  background-color: #fcf8e3;
-  font-size: 15px;
-}
-
 @media (max-width: 991px) {
   .star-1,
   .star-2,
@@ -4102,66 +4084,29 @@ input.error {
   }
 }
 .greeting-container {
-  opacity: 0;
-  animation: fade-in .2s steps(15, start);
-  -webkit-animation: fade-in .2s steps(15, start);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  /*opacity: 0;
+    animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;*/
 }
 .tree {
-    position: relative;
-    opacity: 0;
-    animation: fade-in-transform .2s steps(10, start) .4s;
-    -webkit-animation: fade-in-transform .2s steps(10, start) .4s;
+  /*opacity: 0;
+    animation: fade-in-transform .2s steps(10, start) 2.2s;
+    -webkit-animation: fade-in-transform .2s steps(10, start) 2.2s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -webkit-animation-timing-function: ease-out; 
-    animation-timing-function: ease-out;
-}  
-
-@keyframes blink-star {
-  0% { opacity: 0; }
-  10%, 90% { opacity: 1; }
-  100% { opacity: 0; }
+    animation-timing-function: ease-out;*/
 }
-@-webkit-keyframes blink-star {
-  0% { opacity: 0; }
-  10%, 90% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-.tree:before {
-  content: '';
-  background: url(../images/tree-star.png) center center no-repeat;  
-  background-size: contain;
-  display: inline-block;
-  width: 100%;
-  height: 3em;
-  position: absolute;
-  top: 3em;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  animation: blink-star 6s steps(15, start) infinite ;
-  -webkit-animation: blink-star 6s steps(15, start) infinite ;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-@media screen and (max-width: 767px) {
-  .tree:before {
-    height: 2em;
-    top: 0em;
-  }
-}
-
 .card-content {
-  opacity: 0;
-  animation: fade-in-transform 0.2s steps(10, start) .2s;
-  -webkit-animation: fade-in-transform 0.2s steps(10, start) .2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
+  /*opacity: 0;
+    animation: fade-in-transform .4s steps(10, start) 2.4s;
+    -webkit-animation: fade-in-transform .4s steps(10, start) 2.4s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out; 
+    animation-timing-function: ease-out;*/
 }
 /*
     -webkit-animation-delay : 1s;
@@ -4254,7 +4199,7 @@ input.error {
   }
 }
 .module {
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 @media (max-width: 991px) {
   .module {
@@ -4281,7 +4226,6 @@ input.error {
   .greeting {
     font-size: 20px;
     margin-top: 105px;
-    margin-top: 55px;
   }
 }
 @media (max-width: 767px) {
@@ -4289,7 +4233,8 @@ input.error {
     /*margin-top: 20px;
     font-size: 12px;
     margin-top: 30px;*/
-    display: none;
+    /*display: none;*/
+    margin-top: 0;
   }
 }
 .greeting-left {
@@ -4299,7 +4244,10 @@ input.error {
 }
 @media (max-width: 767px) {
   .greeting-left {
-    display: none;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
   }
 }
 .greeting-right {
@@ -4309,51 +4257,47 @@ input.error {
 }
 @media (max-width: 767px) {
   .greeting-right {
-    display: none;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 @media (max-width: 767px) {
   .greeting-container {
-    background: url(../images/greeting.png) center center no-repeat;
     height: 30px;
     background-size: contain;
     margin-top: 1.5em;
   }
 }
-.tree img {
-  margin: 0 auto;
-}
-@media (max-width: 991px) {
-  .tree img {
-    max-width: 120px;
+@media (max-width: 767px) and (max-width: 767px) {
+  .greeting-container {
+    margin-top: 4em;
   }
+}
+.container {
+  position: relative;
 }
 .footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
-  background-color: #fff;
-  height: 60px;
+  width: 100%;
+  height: 80px;
   text-align: right;
-  box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.2);
+  padding-top: 20px;
+  background: url(/dist/images/logo.png) right 20px bottom no-repeat #ffffff;
 }
 @media (max-width: 767px) {
   .footer {
-    height: 40px;
+    background-size: contain;
+    height: 60px;
   }
 }
-.bem-logo {
-  background: url(../images/logo.svg) 26px center no-repeat;
-  background-size: 250px auto;
-  height: 60px;
-  display: block;
-  position: relative;
-  max-width: 280px;
-  margin: 0 0 0 auto;
-}
-.bem-logo a {
+.footer a {
   display: block;
   position: absolute;
   left: 0;
@@ -4361,34 +4305,25 @@ input.error {
   top: 0;
   bottom: 0;
 }
-@media (max-width: 1199px) {
-  .bem-logo {
-    background-size: 250px 100%;
-  }
-}
-@media (max-width: 991px) {
-  .bem-logo {
-    background-position: right center;
-    background-size: 250px 100%;
-  }
-}
-@media (max-width: 767px) {
-  .bem-logo {
-    background-size: 160px 100%;
-    height: 40px;
-    max-width: 180px;
-  }
-}
-.bem-logo:before {
-  display: inline-block;
-  height: 60px;
-  width: 26px;
-  content: '';
-  background: url(../images/shadow.png) right bottom no-repeat;
-  background-size: 100% 100%;
-  position: absolute;
-  left: -20px;
-  top: 0;
+.bem-logo {
+  background-size: contain;
+  /*height: 100px;*/
+  display: block;
+  position: relative;
+  margin: 0 0 0 auto;
+  /*@media (max-width: @screen-md-max) {
+		background-size: 250px 100%;
+	}
+	
+	@media (max-width: @screen-sm-max) {
+		background-position: right center;
+		background-size: 250px 100%;
+	}
+	@media (max-width: @screen-xs-max) {
+		background-size: 160px 100%;
+		height: 40px;
+        max-width: 180px;
+	}*/
 }
 .card p {
   color: #fff;
@@ -4399,7 +4334,7 @@ input.error {
 }
 @media (max-width: 767px) {
   .card p {
-    font-size: 18px;
+    font-size: 17px;
     letter-spacing: inherit;
   }
 }
@@ -4428,6 +4363,22 @@ input.error {
 .card-meta p a {
   color: #fff;
   text-decoration: underline;
+}
+.main:before,
+.main:after {
+  content: " ";
+  display: table;
+}
+.main:after {
+  clear: both;
+}
+.main:before,
+.main:after {
+  content: " ";
+  display: table;
+}
+.main:after {
+  clear: both;
 }
 @media (max-width: 767px) {
   .main {

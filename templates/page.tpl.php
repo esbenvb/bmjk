@@ -36,10 +36,6 @@
 <div class="gradient"></div>
 <div class="star">
     <div class="star-1"></div>
-    <div class="star-2"></div>
-    <div class="star-3"></div>
-    <div class="star-4"></div>
-    <div class="star-5"></div>
 </div>
 
   
@@ -66,25 +62,18 @@
     <div class="row main">
         
         
-<div class="col-md-4 col-md-push-8 text-center tree">
-      <img src="images/tree.png" class="img-responsive">
+<div class="col-md-3 col-md-push-9 text-center ">>
+      <img src="images/julekugle.png" class="img-responsive hidden-sm hidden-xs">
 </div>
-<div class="col-md-8 col-md-pull-4 relative card-content">        
+<div class="col-md-8 col-md-pull-4 relative">        
     	<?php print $content; ?>
     </div>
 
 </div>    
 
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-md-push-8">
-                   <div class="bem-logo"><a href="http://www.berlingskemedia.dk"></a></div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+<div class="footer">
+  <a href="http://www.berlingskemedia.dk"></a>
+</div>
 
     
     
