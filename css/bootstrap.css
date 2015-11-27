@@ -4289,7 +4289,7 @@ body {
   height: 80px;
   text-align: right;
   padding-top: 20px;
-  background: url(/dist/images/logo.png) right 20px bottom no-repeat #ffffff;
+  background: url(/images/logo.png) right 20px bottom no-repeat #ffffff;
 }
 @media (max-width: 767px) {
   .footer {
