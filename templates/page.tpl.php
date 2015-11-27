@@ -64,7 +64,7 @@
     <div class="col-md-3 col-md-push-9 text-center">
           <img src="images/julekugle.png" class="img-responsive hidden-sm hidden-xs">
     </div>
-    <div class="col-md-8 col-md-pull-4 relative">        
+    <div class="col-md-9 col-md-pull-3 relative">        
      	<?php print $content; ?>
     </div>
 
