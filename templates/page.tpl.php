@@ -39,7 +39,7 @@
 </div>
 
   
-    <div class="container">
+<div class="container">
     <div class="module">
 	    <div class="row">
 		    <div class="col-md-12 greeting-container">
@@ -59,22 +59,21 @@
 <?php endif; ?>
 
 
-    <div class="row main">
-        
-        
-<div class="col-md-3 col-md-push-9 text-center ">>
-      <img src="images/julekugle.png" class="img-responsive hidden-sm hidden-xs">
-</div>
-<div class="col-md-8 col-md-pull-4 relative">        
-    	<?php print $content; ?>
+  <div class="row main">
+          
+    <div class="col-md-3 col-md-push-9 text-center">
+          <img src="images/julekugle.png" class="img-responsive hidden-sm hidden-xs">
+    </div>
+    <div class="col-md-8 col-md-pull-4 relative">        
+     	<?php print $content; ?>
     </div>
 
-</div>    
+  </div>    
 
-<div class="footer">
-  <a href="http://www.berlingskemedia.dk"></a>
+  <div class="footer">
+    <a href="http://www.berlingskemedia.dk"></a>
+  </div>
 </div>
-
     
     
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
