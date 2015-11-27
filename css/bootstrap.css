@@ -1,4 +1,4 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -3885,11 +3885,15 @@ html,
 body {
   height: 100%;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 .preloader {
   background-repeat: repeat-x;
-  background-image: -webkit-linear-gradient(-30deg, #c6cc00, #00843d);
-  background-image: -o-linear-gradient(-30deg, #c6cc00, #00843d);
-  background-image: linear-gradient(-30deg, #c6cc00, #00843d);
+  background-image: -webkit-linear-gradient(-30deg, #f7a600, #c51b1b);
+  background-image: -o-linear-gradient(-30deg, #f7a600, #c51b1b);
+  background-image: linear-gradient(-30deg, #f7a600, #c51b1b);
   position: fixed;
   top: 0;
   left: 0;
@@ -3925,9 +3929,9 @@ body {
   right: 250px;
   z-index: 9999;
   background-repeat: repeat-x;
-  background-image: -webkit-linear-gradient(-30deg, #c6cc00, #00843d);
-  background-image: -o-linear-gradient(-30deg, #c6cc00, #00843d);
-  background-image: linear-gradient(-30deg, #c6cc00, #00843d);
+  background-image: -webkit-linear-gradient(-30deg, #f7a600, #c51b1b);
+  background-image: -o-linear-gradient(-30deg, #f7a600, #c51b1b);
+  background-image: linear-gradient(-30deg, #f7a600, #c51b1b);
 }
 @keyframes pulsate {
   0% {
@@ -3966,6 +3970,7 @@ body {
   padding-bottom: 200px;
 }
 .gradient {
+  /*#gradient.directional(#f7a600,#c51b1b, -30deg);*/
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(-30deg, #c6cc00, #00843d);
   background-image: -o-linear-gradient(-30deg, #c6cc00, #00843d);
@@ -3985,8 +3990,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
+  /*animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);*/
 }
 .star-1 {
   position: absolute;
@@ -3994,11 +3999,11 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
-  animation: fade-in-half 2s steps(15, start);
-  -webkit-animation: fade-in-half 2s steps(15, start);
-  opacity: .4;
+  /*animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);*/
+  /*animation: fade-in-half 2s steps(15, start);
+    -webkit-animation: fade-in-half 2s steps(15, start);
+    opacity: .4;*/
   background: url(../images/star-main.png) center top no-repeat;
 }
 .blink {
@@ -4011,8 +4016,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
+  /*animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);*/
   animation: blink 6s steps(15, start) infinite;
   -webkit-animation: blink 6s steps(15, start) infinite;
   opacity: 0;
@@ -4026,8 +4031,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
+  /*animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);*/
   animation: blink 6s steps(15, start) infinite;
   -webkit-animation: blink 6s steps(15, start) infinite;
   opacity: 0;
@@ -4043,8 +4048,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
+  /*animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);*/
   animation: blink 6s steps(15, start) infinite;
   -webkit-animation: blink 6s steps(15, start) infinite;
   opacity: 0;
@@ -4060,8 +4065,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
+  /*animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);*/
   animation: blink 6s steps(15, start) infinite;
   -webkit-animation: blink 6s steps(15, start) infinite;
   opacity: 0;
@@ -4079,29 +4084,29 @@ body {
   }
 }
 .greeting-container {
-  opacity: 0;
-  animation: fade-in 2s steps(15, start);
-  -webkit-animation: fade-in 2s steps(15, start);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  /*opacity: 0;
+    animation: fade-in 2s steps(15, start);
+    -webkit-animation: fade-in 2s steps(15, start);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;*/
 }
 .tree {
-  opacity: 0;
-  animation: fade-in-transform 0.2s steps(10, start) 2.2s;
-  -webkit-animation: fade-in-transform 0.2s steps(10, start) 2.2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
+  /*opacity: 0;
+    animation: fade-in-transform .2s steps(10, start) 2.2s;
+    -webkit-animation: fade-in-transform .2s steps(10, start) 2.2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out; 
+    animation-timing-function: ease-out;*/
 }
 .card-content {
-  opacity: 0;
-  animation: fade-in-transform 0.4s steps(10, start) 2.4s;
-  -webkit-animation: fade-in-transform 0.4s steps(10, start) 2.4s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
+  /*opacity: 0;
+    animation: fade-in-transform .4s steps(10, start) 2.4s;
+    -webkit-animation: fade-in-transform .4s steps(10, start) 2.4s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out; 
+    animation-timing-function: ease-out;*/
 }
 /*
     -webkit-animation-delay : 1s;
@@ -4194,7 +4199,7 @@ body {
   }
 }
 .module {
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 @media (max-width: 991px) {
   .module {
@@ -4221,7 +4226,6 @@ body {
   .greeting {
     font-size: 20px;
     margin-top: 105px;
-    margin-top: 55px;
   }
 }
 @media (max-width: 767px) {
@@ -4229,7 +4233,8 @@ body {
     /*margin-top: 20px;
     font-size: 12px;
     margin-top: 30px;*/
-    display: none;
+    /*display: none;*/
+    margin-top: 0;
   }
 }
 .greeting-left {
@@ -4239,7 +4244,10 @@ body {
 }
 @media (max-width: 767px) {
   .greeting-left {
-    display: none;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
   }
 }
 .greeting-right {
@@ -4249,51 +4257,47 @@ body {
 }
 @media (max-width: 767px) {
   .greeting-right {
-    display: none;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 @media (max-width: 767px) {
   .greeting-container {
-    background: url(../images/greeting.png) center center no-repeat;
     height: 30px;
     background-size: contain;
     margin-top: 1.5em;
   }
 }
-.tree img {
-  margin: 0 auto;
-}
-@media (max-width: 991px) {
-  .tree img {
-    max-width: 120px;
+@media (max-width: 767px) and (max-width: 767px) {
+  .greeting-container {
+    margin-top: 4em;
   }
+}
+.container {
+  position: relative;
 }
 .footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
-  background-color: #fff;
-  height: 60px;
+  width: 100%;
+  height: 80px;
   text-align: right;
-  box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.2);
+  padding-top: 20px;
+  background: url(/dist/images/logo.png) right 20px bottom no-repeat #ffffff;
 }
 @media (max-width: 767px) {
   .footer {
-    height: 40px;
+    background-size: contain;
+    height: 60px;
   }
 }
-.bem-logo {
-  background: url(/dist/images/logo.svg) 26px center no-repeat;
-  background-size: 250px auto;
-  height: 60px;
-  display: block;
-  position: relative;
-  max-width: 280px;
-  margin: 0 0 0 auto;
-}
-.bem-logo a {
+.footer a {
   display: block;
   position: absolute;
   left: 0;
@@ -4301,34 +4305,25 @@ body {
   top: 0;
   bottom: 0;
 }
-@media (max-width: 1199px) {
-  .bem-logo {
+.bem-logo {
+  background-size: contain;
+  /*height: 100px;*/
+  display: block;
+  position: relative;
+  margin: 0 0 0 auto;
+  /*@media (max-width: @screen-md-max) {
     background-size: 250px 100%;
   }
-}
-@media (max-width: 991px) {
-  .bem-logo {
+  
+  @media (max-width: @screen-sm-max) {
     background-position: right center;
     background-size: 250px 100%;
   }
-}
-@media (max-width: 767px) {
-  .bem-logo {
+  @media (max-width: @screen-xs-max) {
     background-size: 160px 100%;
     height: 40px;
-    max-width: 180px;
-  }
-}
-.bem-logo:before {
-  display: inline-block;
-  height: 60px;
-  width: 26px;
-  content: '';
-  background: url(/dist/images/shadow.png) right bottom no-repeat;
-  background-size: 100% 100%;
-  position: absolute;
-  left: -20px;
-  top: 0;
+        max-width: 180px;
+  }*/
 }
 .card p {
   color: #fff;
@@ -4339,7 +4334,7 @@ body {
 }
 @media (max-width: 767px) {
   .card p {
-    font-size: 18px;
+    font-size: 17px;
     letter-spacing: inherit;
   }
 }
@@ -4369,6 +4364,22 @@ body {
   color: #fff;
   text-decoration: underline;
 }
+.main:before,
+.main:after {
+  content: " ";
+  display: table;
+}
+.main:after {
+  clear: both;
+}
+.main:before,
+.main:after {
+  content: " ";
+  display: table;
+}
+.main:after {
+  clear: both;
+}
 @media (max-width: 767px) {
   .main {
     margin-top: 10px;
@@ -4383,4 +4394,3 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 10px 0;
 }
-/*# sourceMappingURL=bootstrap.css.map */
