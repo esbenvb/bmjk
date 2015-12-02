@@ -28,7 +28,7 @@
 						
 						</p>
 
-						<a class="btn" href="<?php print $card_url; ?>" style="margin: 0;padding: 10px 16px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #FFF;text-decoration: none;background-color: #e98507;font-weight: bold;margin-right: 10px;margin-bottom: 10px;text-align: center;cursor: pointer;display: inline-block">Læs den her</a>
+						<a class="btn" href="<?php print $card_url; ?>" style="margin: 0;padding: 10px 16px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #FFF;text-decoration: none;background-color: #00843d;font-weight: bold;margin-right: 10px;margin-bottom: 10px;text-align: center;cursor: pointer;display: inline-block">Læs den her</a>
 						
 						<h3 style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;, &quot;Helvetica Neue Light&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif;line-height: 1.1;margin-bottom: 15px;color: #000;margin-top: 20px;font-weight: 500;font-size: 27px">You have received a Christmas greeting</h3>
 
@@ -37,7 +37,7 @@
 						Dear <?php print $recipient_name; ?>. You have received a Christmas greeting from <?php print $sender_name; ?>
 
 						</p>
-						<a class="btn" href="<?php print $card_url; ?>" style="margin: 0;padding: 10px 16px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #FFF;text-decoration: none;background-color: #e98507;font-weight: bold;margin-right: 10px;margin-bottom: 10px;text-align: center;cursor: pointer;display: inline-block">Click to read</a>
+						<a class="btn" href="<?php print $card_url; ?>" style="margin: 0;padding: 10px 16px;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif;color: #FFF;text-decoration: none;background-color: #00843d;font-weight: bold;margin-right: 10px;margin-bottom: 10px;text-align: center;cursor: pointer;display: inline-block">Click to read</a>
 						
 						<br style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;, &quot;Helvetica&quot;, Helvetica, Arial, sans-serif" /></td>
 				</tr></table></div>
